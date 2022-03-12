@@ -349,6 +349,89 @@ body {
   font-size: 1.4rem;
 }
 
+.hero-img {
+  position: relative;
+  padding: 10rem 2rem;
+  background-image: radial-gradient(circle at top right, rgba(49, 35, 4, 0.452) 0%, rgba(141, 139, 29, 0.055) 100%), url("../assets/img/coffee_on_bed_640.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-img__title {
+  font-family: "Patrick Hand", cursive;
+  font-size: 4.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-img__text {
+  padding: 1rem 0;
+}
+
+.coffee__card {
+  position: relative;
+  margin: 1rem 0;
+  height: 450px;
+  color: #683413;
+  text-align: center;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.coffee__card:hover .coffee__card-img {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  opacity: 0;
+}
+
+.coffee__card:hover .coffee__card-info {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  opacity: 1;
+}
+
+.coffee__card-img {
+  padding: 2rem;
+  height: 100%;
+  border-radius: 8px;
+  background-size: cover;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.coffee__card-img--first {
+  background-image: radial-gradient(circle at top right, rgba(49, 35, 4, 0.452) 0%, rgba(141, 139, 29, 0.055) 100%), url("../assets/img/ethiopia_640.png");
+}
+
+.coffee__card-img--seconf {
+  background-image: radial-gradient(circle at top right, rgba(49, 35, 4, 0.452) 0%, rgba(141, 139, 29, 0.055) 100%), url("../assets/img/peru_640.jpg");
+}
+
+.coffee__card-img--third {
+  background-image: radial-gradient(circle at top right, rgba(49, 35, 4, 0.452) 0%, rgba(141, 139, 29, 0.055) 100%), url("../assets/img/brazil_640.png");
+}
+
+.coffee__card-img-title {
+  font-family: "Patrick Hand", cursive;
+  font-size: 2.2rem;
+}
+
+.coffee__card-img-info {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 1.8rem;
+}
+
+.coffee__card-img-info i {
+  margin-right: 0.3rem;
+}
+
 @media (min-width: 576px) {
   .dreams__box {
     -webkit-box-orient: horizontal;
@@ -388,13 +471,23 @@ body {
     font-size: 6.6rem;
   }
   .header__text {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .header__btn {
     font-size: 1.6rem;
   }
   .dreams__text {
     font-size: 1.8rem;
+  }
+  .hero-img {
+    padding: 30rem 2rem;
+  }
+  .hero-img hr {
+    margin: 0 auto;
+    width: 70%;
+  }
+  .hero-img__text {
+    font-size: 2.2rem;
   }
 }
 
@@ -433,6 +526,17 @@ body {
   }
   .dreams__text {
     font-size: 2.2rem;
+  }
+  .hero-img {
+    padding: 40rem 2rem;
+    background-image: radial-gradient(circle at top right, rgba(49, 35, 4, 0.452) 0%, rgba(141, 139, 29, 0.055) 100%), url("../assets/img/coffee_on_bed_1920.jpg");
+  }
+  .hero-img__title {
+    font-size: 7.2rem;
+  }
+  .hero-img__hr {
+    width: 60%;
+    max-width: 900px;
   }
 }
 /*# sourceMappingURL=style.css.map */
