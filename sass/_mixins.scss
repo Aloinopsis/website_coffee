@@ -13,3 +13,9 @@
 	background-position: center;
 	background-attachment: fixed;
 }
+
+@mixin worldCardStyle {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}

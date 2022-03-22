@@ -326,6 +326,9 @@ body {
 }
 
 .coffee__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -368,7 +371,7 @@ body {
   padding: 1rem 0;
 }
 
-.coffee__card {
+.world__card {
   position: relative;
   margin: 1rem 0;
   height: 450px;
@@ -378,22 +381,22 @@ body {
           perspective: 1000px;
 }
 
-.coffee__card:hover .coffee__card-img {
+.world__card:hover .world__card-img {
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
   opacity: 0;
 }
 
-.coffee__card:hover .coffee__card-info {
+.world__card:hover .world__card-info {
   -webkit-transform: rotateY(0);
           transform: rotateY(0);
   opacity: 1;
 }
 
-.coffee__card-img {
+.world__card-img {
   padding: 2rem;
   height: 100%;
-  border-radius: 8px;
+  border-radius: 14px;
   background-size: cover;
   -webkit-transition: opacity 1s, -webkit-transform 1s;
   transition: opacity 1s, -webkit-transform 1s;
@@ -401,35 +404,36 @@ body {
   transition: transform 1s, opacity 1s, -webkit-transform 1s;
 }
 
-.coffee__card-img--first {
+.world__card-img--first {
   background-image: radial-gradient(circle at top right, rgba(49, 35, 4, 0.452) 0%, rgba(141, 139, 29, 0.055) 100%), url("../assets/img/ethiopia_640.png");
 }
 
-.coffee__card-img--second {
+.world__card-img--second {
   background-image: radial-gradient(circle at top right, rgba(49, 35, 4, 0.452) 0%, rgba(141, 139, 29, 0.055) 100%), url("../assets/img/peru_640.jpg");
 }
 
-.coffee__card-img--third {
+.world__card-img--third {
   background-image: radial-gradient(circle at top right, rgba(49, 35, 4, 0.452) 0%, rgba(141, 139, 29, 0.055) 100%), url("../assets/img/brazil_640.png");
 }
 
-.coffee__card-img-title {
+.world__card-img-title {
   font-family: "Patrick Hand", cursive;
   font-size: 2.8rem;
 }
 
-.coffee__card-img-info {
+.world__card-img-info {
   position: absolute;
   bottom: 30px;
   right: 30px;
   font-size: 1.8rem;
+  color: white;
 }
 
-.coffee__card-img-info i {
+.world__card-img-info i {
   margin-right: 0.3rem;
 }
 
-.coffee__card-info {
+.world__card-info {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -446,7 +450,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-image: radial-gradient(circle at top right, rgba(49, 35, 4, 0.452) 0%, rgba(141, 139, 29, 0.055) 100%);
-  border-radius: 8px;
+  border-radius: 14px;
   opacity: 0;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
@@ -456,7 +460,7 @@ body {
   transition: transform 1s, opacity 1s, -webkit-transform 1s;
 }
 
-.coffee__card-info-title {
+.world__card-info-title {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -466,23 +470,23 @@ body {
   font-size: 2.8rem;
 }
 
-.coffee__card-info-list {
+.world__card-info-list {
   margin: 0 auto;
   width: 70%;
   list-style: none;
 }
 
-.coffee__card-info-list-item {
+.world__card-info-list-item {
   padding: 1rem;
   font-size: 1.4rem;
   border-bottom: 1px solid white;
 }
 
-.coffee__card-info-list-item:last-child {
+.world__card-info-list-item:last-child {
   border-bottom: none;
 }
 
-.coffee__card-info-btn {
+.world__card-info-btn {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -496,12 +500,12 @@ body {
   cursor: pointer;
 }
 
-.coffee__card-info-btn::before {
-  background-color: lightgreen;
+.world__card-info-btn::before {
+  background-color: #87e287;
 }
 
 @media (min-width: 576px) {
-  .dreams__box {
+  .coffee__box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -510,21 +514,21 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .dreams__box__text {
+  .coffee__box-text {
     width: 55%;
   }
-  .dreams__box__text--right {
+  .coffee__box-text--right {
     text-align: right;
   }
-  .dreams__box-img {
+  .coffee__box-img {
     width: 40%;
   }
-  .dreams__box-img--right {
+  .coffee__box-img--right {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
-  .dreams__img {
+  .coffee__img {
     margin-bottom: 0;
     max-height: 300px;
   }
@@ -544,7 +548,7 @@ body {
   .header__btn {
     font-size: 1.6rem;
   }
-  .dreams__text {
+  .coffee__text {
     font-size: 1.8rem;
   }
   .hero-img {
@@ -556,6 +560,20 @@ body {
   }
   .hero-img__text {
     font-size: 2.2rem;
+  }
+  .world__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .world__card {
+    margin: 1rem;
+    width: 45%;
   }
 }
 
@@ -573,10 +591,10 @@ body {
   .nav__item {
     font-size: 4.8rem;
   }
-  .dreams__box {
+  .coffee__box {
     margin: 5rem 0;
   }
-  .dreams__box__text {
+  .coffee__box-text {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -589,10 +607,10 @@ body {
             justify-content: flex-end;
     margin-bottom: 2.5rem;
   }
-  .dreams__title {
-    font-size: 3.6rem;
+  .coffee__title {
+    font-size: 3.3rem;
   }
-  .dreams__text {
+  .coffee__text {
     font-size: 2.2rem;
   }
   .hero-img {
@@ -602,9 +620,15 @@ body {
   .hero-img__title {
     font-size: 7.2rem;
   }
-  .hero-img__hr {
+  .hero-img hr {
     width: 60%;
     max-width: 900px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .world__card {
+    width: 30%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -173,10 +173,10 @@ body {
 
 // MAIN
 
-// COFFEE SECTION
+// COFFEE SECTION - FIRST SECTION
 .coffee {
 	&__box {
-		// display: flex;
+		display: flex;
 		flex-direction: column;
 		margin: 2rem 0;
 	}
@@ -215,8 +215,8 @@ body {
 	}
 }
 
-// KAWY
-.coffee {
+// KAWY ŚWIATA
+.world {
 	&__card {
 		position: relative;
 		margin: 1rem 0;
@@ -226,11 +226,11 @@ body {
 		perspective: 1000px;
 
 		&:hover {
-			.coffee__card-img {
+			.world__card-img {
 				transform: rotateY(-180deg);
 				opacity: 0;
 			}
-			.coffee__card-info {
+			.world__card-info {
 				transform: rotateY(0);
 				opacity: 1;
 			}
@@ -239,7 +239,7 @@ body {
 		&-img {
 			padding: 2rem;
 			height: 100%;
-			border-radius: 8px;
+			border-radius: 14px;
 			background-size: cover;
 			transition: transform 1s, opacity 1s;
 
@@ -266,6 +266,7 @@ body {
 				bottom: 30px;
 				right: 30px;
 				font-size: 1.8rem;
+				color: $color_white;
 
 				i {
 					margin-right: 0.3rem;
@@ -283,15 +284,13 @@ body {
 			flex-direction: column;
 			justify-content: center;
 			background-image: $light-grown-gradient;
-			border-radius: 8px;
+			border-radius: 14px;
 			opacity: 0;
 			transform: rotateY(180deg);
 			transition: transform 1s, opacity 1s;
 
 			&-title {
-				position: absolute;
-				left: 50%;
-				transform: translateX(-50%);
+				@include worldCardStyle;
 				top: 1.2rem;
 				font-family: '"Patrick Hand", cursive';
 				font-size: 2.8rem;
@@ -314,9 +313,7 @@ body {
 			}
 
 			&-btn {
-				position: absolute;
-				left: 50%;
-				transform: translateX(-50%);
+				@include worldCardStyle;
 				bottom: 2rem;
 				padding: 1rem;
 				border-radius: 8px;
@@ -326,7 +323,7 @@ body {
 				cursor: pointer;
 
 				&::before {
-					background-color: lightgreen;
+					background-color: rgb(135, 226, 135);
 				}
 			}
 		}
@@ -336,12 +333,12 @@ body {
 // MEDIA
 
 @media (min-width: 576px) {
-	.dreams {
+	.coffee {
 		&__box {
 			flex-direction: row;
 			justify-content: space-between;
 
-			&__text {
+			&-text {
 				width: 55%;
 
 				&--right {
@@ -383,7 +380,7 @@ body {
 		}
 	}
 
-	.dreams {
+	.coffee {
 		&__text {
 			font-size: 1.8rem;
 		}
@@ -399,6 +396,19 @@ body {
 
 		&__text {
 			font-size: 2.2rem;
+		}
+	}
+
+	.world {
+		&__cards {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		&__card {
+			margin: 1rem;
+			width: 45%;
 		}
 	}
 }
@@ -423,11 +433,11 @@ body {
 		}
 	}
 
-	.dreams {
+	.coffee {
 		&__box {
 			margin: 5rem 0;
 
-			&__text {
+			&-text {
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-end;
@@ -436,7 +446,7 @@ body {
 		}
 
 		&__title {
-			font-size: 3.6rem;
+			font-size: 3.3rem;
 		}
 
 		&__text {
@@ -453,9 +463,17 @@ body {
 			font-size: 7.2rem;
 		}
 
-		&__hr {
+		hr {
 			width: 60%;
 			max-width: 900px;
+		}
+	}
+}
+
+@media (min-width: 1100px) {
+	.world {
+		&__card {
+			width: 30%;
 		}
 	}
 }
