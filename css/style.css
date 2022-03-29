@@ -504,6 +504,71 @@ body {
   background-color: #87e287;
 }
 
+.offers {
+  position: relative;
+  background-image: radial-gradient(circle at top right, rgba(49, 35, 4, 0.452) 0%, rgba(141, 139, 29, 0.055) 100%), url("../assets/img/offers_header_640.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.offers .section-heading {
+  color: white;
+}
+
+.offers__option {
+  margin: 1rem 0;
+  -webkit-box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.18);
+          box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.18);
+  background-color: white;
+  overflow: hidden;
+}
+
+.offers__option-img {
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.offers__option-img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.offers__option-info {
+  padding: 2rem;
+}
+
+.offers__option-heading {
+  margin-bottom: 0.5;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
+.offers__option-text {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #683413;
+}
+
+.offers__option-btn {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  width: 100%;
+  color: white;
+  background-color: #683413;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.offers__option-btn::before {
+  background-color: #f2542d;
+}
+
 @media (min-width: 576px) {
   .coffee__box {
     -webkit-box-orient: horizontal;
