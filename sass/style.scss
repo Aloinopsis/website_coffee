@@ -221,7 +221,7 @@ body {
 		position: relative;
 		margin: 1rem 0;
 		height: 450px;
-		color: $color_brown;
+		color: rgba(0, 0, 0, 0.712);
 		text-align: center;
 		perspective: 1000px;
 
@@ -233,6 +233,7 @@ body {
 			.world__card-info {
 				transform: rotateY(0);
 				opacity: 1;
+				color: $color_brown;
 			}
 		}
 
@@ -330,10 +331,10 @@ body {
 	}
 }
 
-// OFERTY
-.offers {
+// RELAKS
+.relaks {
 	position: relative;
-	@include heroImages("../assets/img/offers_main_640.jpg");
+	@include heroImages("../assets/img/relaks_main_640.jpg");
 	overflow: hidden;
 
 	.section-heading {
@@ -387,6 +388,155 @@ body {
 	}
 }
 
+// REVIEWS
+
+@media (max-width: 767px) {
+	.reviews.section-padding {
+		padding: 6rem 0;
+	}
+}
+
+.reviews {
+	&__box {
+		position: relative;
+		margin: 4rem;
+		padding: 3rem;
+		border-radius: 8px;
+		box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.18);
+		transition: transform 0.3s;
+
+		&:hover {
+			transform: scale(0.95);
+		}
+	}
+
+	&__box-img {
+		position: absolute;
+		top: 8%;
+		left: 75%;
+		transform: translate(-50%, -50%);
+
+		img {
+			width: 70px;
+			height: 70px;
+			object-fit: cover;
+			border-radius: 50%;
+		}
+	}
+
+	&__box-quote {
+		margin-bottom: 1rem;
+		font-size: 3rem;
+		color: $color_brown;
+	}
+
+	&__box-text {
+		margin-bottom: 1rem;
+		font-size: 1.4rem;
+		color: $color_brown;
+	}
+}
+
+// CONTACT
+.contact {
+	position: relative;
+	background-color: $color_beige;
+	overflow: hidden;
+
+	.white-block-left {
+		background-color: $color-brown;
+	}
+
+	&__form,
+	&__form-top {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__form-label {
+		margin-bottom: 0.5rem;
+		text-transform: uppercase;
+	}
+
+	&__form-input {
+		@include contactForm;
+	}
+
+	&__form-textarea {
+		@include contactForm;
+
+		max-width: 100%;
+		min-width: 100%;
+		width: 100%;
+		min-height: 150px;
+	}
+
+	&__form-btn {
+		align-self: flex-end;
+		padding: 1rem;
+		width: 100%;
+		max-width: 300px;
+		color: $color_white;
+		border: none;
+		border-radius: 8px;
+		background-color: $color_brown;
+		cursor: pointer;
+
+		&::before {
+			background-color: rgba(143, 77, 77, 0.877);
+		}
+	}
+}
+
+// FOOTER
+.footer {
+	color: $color_white;
+	background-color: $color_brown;
+
+	.wrapper {
+		padding: 6rem 2rem 2rem;
+	}
+
+	&__box {
+		font-size: 1.4rem;
+	}
+
+	&__box-desktop {
+		display: none;
+	}
+
+	&__box-title {
+		margin-bottom: 1rem;
+		font-size: 3rem;
+		text-transform: uppercase;
+	}
+
+	&__box-social {
+		margin: 2rem 0 1rem;
+	}
+
+	&__box-link {
+		padding: 0 3rem;
+		font-size: 3.6rem;
+		color: $color_white;
+		text-decoration: none;
+		transition: color 0.3s;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:hover {
+			color: $color_beige;
+		}
+	}
+
+	&__bottom-text {
+		padding: 2rem;
+		text-align: center;
+	}
+}
+
 // MEDIA
 
 @media (min-width: 576px) {
@@ -418,7 +568,7 @@ body {
 		}
 	}
 
-	.offers {
+	.relaks {
 		&__option {
 			display: flex;
 			margin: 3rem 0;
@@ -500,6 +650,42 @@ body {
 			width: 45%;
 		}
 	}
+
+	.footer {
+		&__boxes {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__box-desktop {
+			display: block;
+		}
+
+		&__box {
+			margin: 0 2rem;
+			width: 25%;
+
+			&:first-child {
+				width: 50%;
+			}
+		}
+
+		&__box-title {
+			font-size: 2.4rem;
+		}
+
+		&__box-list {
+			list-style: none;
+		}
+		&__box-list-item {
+			margin-bottom: 1rem;
+
+			a {
+				color: $color_white;
+				text-decoration: none;
+			}
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -558,8 +744,8 @@ body {
 		}
 	}
 
-	.offers {
-		background-image: url("../assets/img/offers_main_1920.jpg");
+	.relaks {
+		background-image: url("../assets/img/relaks_main_1920.jpg");
 
 		&__option {
 			&-img {
