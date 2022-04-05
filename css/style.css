@@ -272,6 +272,12 @@ body {
           animation: navItemsAnimation 1s both;
 }
 
+.brown-bars-color,
+.brown-bars-color::after,
+.brown-bars-color::before {
+  background-color: #683413;
+}
+
 .header {
   position: relative;
   display: -webkit-box;
@@ -516,6 +522,7 @@ body {
 
 .relaks .section-heading {
   color: white;
+  font-weight: bold;
 }
 
 .relaks__option {
@@ -707,6 +714,12 @@ body {
   margin-bottom: 1rem;
   font-size: 3rem;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .footer__box-social {

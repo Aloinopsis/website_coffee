@@ -130,6 +130,12 @@ body {
 	animation: navItemsAnimation 1s both;
 }
 
+.brown-bars-color,
+.brown-bars-color::after,
+.brown-bars-color::before {
+	background-color: $color_brown;
+}
+
 // HEADER
 
 .header {
@@ -338,7 +344,8 @@ body {
 	overflow: hidden;
 
 	.section-heading {
-		color: $color-white;
+		color: $color_white;
+		font-weight: bold;
 	}
 
 	&__option {
@@ -509,6 +516,8 @@ body {
 		margin-bottom: 1rem;
 		font-size: 3rem;
 		text-transform: uppercase;
+		display: flex;
+		justify-content: space-between;
 	}
 
 	&__box-social {
